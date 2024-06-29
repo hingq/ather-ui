@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.body {
+  --line-border-fill: #3498db;
+  --line-border-empty: #ccc;
+  /* background-color: #1f1f1f; */
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  position: relative;
+  color: #d3d1d1;
+  font-size: 16px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: all 0.4s ease;
+}
+
+.circle:nth-child(n + 3)::before {
+  content: '';
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: -240%;
+  transform: translateY(-50%);
+  height: 3px;
+  width: 240%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.circle.active:nth-child(n + 3):before {
+  background-color: #3498db;
+}
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
