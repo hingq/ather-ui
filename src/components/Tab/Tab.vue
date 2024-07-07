@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 defineOptions({
-    name:'Tab'
+  name: 'Tab'
 })
 const con = ref()
 const toogle = () => {

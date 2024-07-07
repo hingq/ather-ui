@@ -4,5 +4,3 @@ Tab.install = (app) => {
   app.component('hTab', Tab)
 }
 export default Tab
-
-

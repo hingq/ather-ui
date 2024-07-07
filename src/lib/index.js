@@ -1,6 +1,6 @@
-import loading from './loading';
-export const directives={
-    loading
+import loading from './loading'
+export const directives = {
+  loading
 }
 
-export * as loading from './loading';
+export * as loading from './loading'

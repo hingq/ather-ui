@@ -2,15 +2,15 @@ import { version } from '../package.json'
 import { components } from './components/index.js'
 import { directives } from './lib/index'
 const install = (app) => {
-  Object.keys(components).forEach(key => {
-    const component = components[key];
+  Object.keys(components).forEach((key) => {
+    const component = components[key]
     if (component && component.install) {
-      component.install(app);
+      component.install(app)
     } else {
-      console.log(component[key]);
-      console.error(`Component ${key} is missing an install method`);
+      console.log(component[key])
+      console.error(`Component ${key} is missing an install method`)
     }
-  });
+  })
   for (const directiveKey in directives) {
     const directive = directives[directiveKey]
     app.directive(directiveKey, directive)
