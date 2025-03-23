@@ -1,6 +1,10 @@
 # component
 
 This template should help get you started developing with Vue 3 in Vite.
+一个vue3的组件库
+[github]:(https://github.com/hingq/ather-ui)
+有问题可以提交issue
+If you have any questions, feel free to raise an issue
 
 ## welcome to submit your components！
 
